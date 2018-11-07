@@ -17,12 +17,11 @@ class RemeraBordada inherits RemeraLisa{
 }
 
 class RemeraSublimada inherits RemeraLisa{
-	var altoDibujo
-	var anchoDibujo
+
 	var dibujo
 	
-	method superficieDibujo()= altoDibujo * anchoDibujo
+	method superficieDibujo()= dibujo.alto() * dibujo.ancho()
 	
-	override method costo()= self.superficieDibujo() * 0.5 + dibujo.precioDerechoAutor() 
+	override method costo()= super() + self.superficieDibujo() * 0.5 + dibujo.precioDerechoAutor() 
 	
 }

@@ -1,6 +1,7 @@
 import remeras.*
 import colores.*
 import talles.*
+import dibujo.*
 describe"remeras"{
 	//remera Negra Talle 34
 	const talle34=new Talle(talle=34)
@@ -19,6 +20,10 @@ describe"remeras"{
 	//remera bordada negra talle 44 con 4 hilos
 	const remera4= new RemeraBordada(talle=talle44,color=colorNegro,cantidadDeColores=2)
 	
+	//remera Sublimada negra talle 44
+	const dibujo1 = new Dibujo(alto=15,ancho=10,precioDerechoAutor=100)
+	const remera5 = new RemeraSublimada(talle=talle44,color=colorNegro,dibujo=dibujo1)
+	
 	
  test "Valor remera Lisa Negra" {	
  	assert.equals(80,remera.costo())
@@ -34,6 +39,9 @@ describe"remeras"{
  
   test "valor remera negra bordada con 4 hilos"{
  	assert.equals(140,remera4.costo())
+ }
+ test "valor remera negra talle 44 sublimada "{
+ 	assert.equals(275,remera4.costo())
  }
  
  
