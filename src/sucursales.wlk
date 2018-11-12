@@ -1,3 +1,4 @@
+// Esta bien que los pedidos se encuentren aqui
 class Sucursal{
 	const property pedidos	
 	const property minimoParaDescuento
